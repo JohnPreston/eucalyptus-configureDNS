@@ -1,0 +1,13 @@
+---
+# tasks file for eucalyptus-configureDNS
+
+- name: Configure DNS properies
+  shell: source /var/tmp/creds/eucarc ;
+         euca-modify-property -p system.dns."{{ item.name }}"="{{ item.value }}"
+  with_items:
+  - "{{ dns_system_properties }}"
+  - "{{ dns_euca_properties }}"
+  - "{{ dns_webservices_properties }}"
+  - "{{ dns_subdomain_properties }}"
+  tags:
+  - configureDNS

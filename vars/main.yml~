@@ -1,0 +1,5 @@
+---
+# vars file for eucalyptus-configureDNS
+
+dns_system_properties:
+- {'name': "system.dns.dnsdomain", value: "{{   }}" }

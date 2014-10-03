@@ -1,0 +1,19 @@
+---
+# vars file for eucalyptus-configureDNS
+
+dns_system_properties:
+- {'name': "system.dns.dnsdomain", value: "{{ dnsdomain }}" }
+- {'name': "system.dns.nameserver", value: "{{ dnsnameserver }}" }
+- {'name': "system.dns.nameserveraddress", value: "{{ dnsnameserveraddress }}" }
+
+dns_euca_properties:
+- {'name': "dns.enabled", 'value': "{{ enabled }}" }
+- {'name': "dns.dns_listener_address_match", 'value': "{{ dns_listener_address_match }}" }
+
+dns_webservices_properties:
+- {'name': "bootstrap.webservices.use_dns_delegation", 'value': "{{ use_dns_delegation }}"}
+- {'name': "bootstrap.webservices.use_instance_dns", 'value': "{{ use_instance_dns }}"}
+
+dns_subdomain_properties:
+- {'name': "loadbalancing.loadbalancer_dns_subdomain", 'value': "{{ loadbalancer_dns_subdomain }}"}
+- {'name': "cloud.vmstate.instance_subdomain", 'value': "{{ instance_subdomain }}"}
