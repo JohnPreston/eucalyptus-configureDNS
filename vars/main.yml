@@ -2,9 +2,9 @@
 # vars file for eucalyptus-configureDNS
 
 dns_system_properties:
-- {'name': "system.dns.dnsdomain", value: "{{ dnsdomain }}" }
-- {'name': "system.dns.nameserver", value: "{{ dnsnameserver }}" }
-- {'name': "system.dns.nameserveraddress", value: "{{ dnsnameserveraddress }}" }
+- {'name': 'system.dns.dnsdomain', value: "{{ dnsdomain }}" }
+- {'name': 'system.dns.nameserver', value: "{{ dnsnameserver }}" }
+- {'name': 'system.dns.nameserveraddress', value: "{{ dnsnameserveraddress }}" }
 
 dns_euca_properties:
 - {'name': "dns.enabled", 'value': "{{ enabled }}" }

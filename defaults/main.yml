@@ -1,2 +1,15 @@
 ---
 # defaults file for eucalyptus-configureDNS
+
+dnsdomain: localhost
+dnsnameserver: ns1.localhost
+dnsnameserveraddress: 127.0.0.1
+
+enabled: true
+dns_listener_address_match: 
+
+use_dns_delegation: false
+use_instance_dns: false
+
+loadbalancer_dns_subdomain: lb
+instance_subdomain: .eucalyptus
